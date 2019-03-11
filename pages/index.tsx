@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Link from 'next/link'
+import Link from '../components/Link'
 import Page from '../components/Page'
 import { Button } from '@semon/semon-ui'
 

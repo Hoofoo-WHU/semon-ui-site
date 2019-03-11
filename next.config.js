@@ -10,6 +10,7 @@ module.exports = withTypescript(withCSS({
   },
   exportPathMap: function () {
     return {
+      '/404.html': { page: '/_error' },
       '/': { page: '/' },
       '/doc/introduce': { page: '/doc', query: { title: 'introduce' } },
       '/doc/install': { page: '/doc', query: { title: 'install' } }
