@@ -5,8 +5,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "export": "next export -o docs",
-    "serve": "serve docs",
+    "export": "next export",
+    "serve": "serve out",
     "type-check": "tsc"
   },
   "dependencies": {

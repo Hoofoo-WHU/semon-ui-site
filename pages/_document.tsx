@@ -10,8 +10,8 @@ class MyDocument extends Document {
     return (
       <html>
         <Head>
-          {/* <style>{`body.preload *{transition: none}`}</style> */}
-          {/* <script dangerouslySetInnerHTML={{ __html: ` window.addEventListener('load',function(){document.body.classList.remove('preload')})` }} /> */}
+          <style>{`body.preload *{transition: none}`}</style>
+          <script dangerouslySetInnerHTML={{ __html: ` window.addEventListener('load',function(){document.body.classList.remove('preload')})` }} />
         </Head>
         <body className="preload">
           <Main />

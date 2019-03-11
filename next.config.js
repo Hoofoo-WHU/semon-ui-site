@@ -2,6 +2,7 @@ const withTypescript = require('@zeit/next-typescript')
 const withCSS = require('@zeit/next-css')
 
 module.exports = withTypescript(withCSS({
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/semon-ui-site' : '',
   exportPathMap: function () {
     return {
       '/': { page: '/' },

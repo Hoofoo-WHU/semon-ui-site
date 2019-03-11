@@ -1,5 +1,6 @@
 import Routes from 'next-routes'
 const routes = new Routes()
+
 export default routes
-  .add('index', '/', 'index')
+  .add('/', '/', 'index')
   .add('doc', '/doc/:title', 'doc')
