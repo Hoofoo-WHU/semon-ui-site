@@ -1,8 +1,13 @@
 const withTypescript = require('@zeit/next-typescript')
 const withCSS = require('@zeit/next-css')
+const prod = process.env.NODE_ENV === 'production'
+const BASE_URL = prod ? '/semon-ui-site' : ''
 
 module.exports = withTypescript(withCSS({
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/semon-ui-site' : '',
+  assetPrefix: BASE_URL,
+  publicRuntimeConfig: {
+    BASE_URL
+  },
   exportPathMap: function () {
     return {
       '/': { page: '/' },

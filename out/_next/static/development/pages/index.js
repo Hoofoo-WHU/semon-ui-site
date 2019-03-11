@@ -36352,7 +36352,7 @@ var IndexPage = function IndexPage() {
 
 /***/ }),
 
-/***/ 4:
+/***/ 5:
 /*!*********************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2FWangShuo%2FDocuments%2FGitHub%2Fsemon-ui-site%2Fpages%2Findex.tsx ***!
   \*********************************************************************************************************************************************/
@@ -36375,5 +36375,5 @@ module.exports = dll_effd29c912beebc303a1;
 
 /***/ })
 
-},[[4,"static/runtime/webpack.js"]]]));;
+},[[5,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map

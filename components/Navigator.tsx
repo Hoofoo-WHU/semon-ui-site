@@ -3,14 +3,10 @@ import { Layout, Button } from '@semon/semon-ui'
 import Route, { Switch } from './Route'
 import DocMenu from './DocMenu'
 const { Header, Content, Sider } = Layout
-import Routes from '../utils/routes'
-import { RouteParams } from 'next-routes'
 import { UrlLike } from 'next/router'
-const { Link } = Routes
+import Link from '../components/Link'
 
 interface NavLinkProps {
-  route: string;
-  params?: RouteParams
   prefetch?: boolean
   shallow?: boolean
   scroll?: boolean
@@ -31,8 +27,8 @@ const NavLink: React.FunctionComponent<NavLinkProps> = (props) => (
 const Navigator: React.FunctionComponent = ({ children }) => (
   <Layout>
     <Header>
-      <NavLink route='/'>主页</NavLink>
-      <NavLink route='/doc/introduce'>组件</NavLink>
+      <NavLink href='/'>主页</NavLink>
+      <NavLink href='/doc?title=introduce' as='/doc/introduce'>组件</NavLink>
     </Header>
     <Switch>
       <Route href='/doc'>
