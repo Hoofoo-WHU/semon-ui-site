@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Page from '../components/Page'
 import { NextContext } from 'next'
+import Post from '../components/Post'
 // import Router from 'next/router'
 
 class DocPage extends React.Component<{ title: string, content: string }> {
@@ -18,7 +19,7 @@ class DocPage extends React.Component<{ title: string, content: string }> {
   render() {
     const { title, content } = this.props
     return (<Page title={title}>
-      {content}
+      <Post>{content}</Post>
     </Page>
     )
   }
