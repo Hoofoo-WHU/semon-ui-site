@@ -24609,10 +24609,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./components/DocMenu.tsx":
-/*!********************************!*\
-  !*** ./components/DocMenu.tsx ***!
-  \********************************/
+/***/ "./components/DocMenu/index.tsx":
+/*!**************************************!*\
+  !*** ./components/DocMenu/index.tsx ***!
+  \**************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -24629,13 +24629,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _semon_semon_ui__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_semon_semon_ui__WEBPACK_IMPORTED_MODULE_6__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! next/router */ "./node_modules/next/router.js");
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var _components_Link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Link */ "./components/Link.tsx");
+/* harmony import */ var _Link__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Link */ "./components/Link.tsx");
+/* harmony import */ var _doc_menu_scss__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./doc-menu.scss */ "./components/DocMenu/doc-menu.scss");
+/* harmony import */ var _doc_menu_scss__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_doc_menu_scss__WEBPACK_IMPORTED_MODULE_9__);
 
 
 
 
 
-var _jsxFileName = "/Users/WangShuo/Documents/GitHub/semon-ui-site/components/DocMenu.tsx";
+var _jsxFileName = "/Users/WangShuo/Documents/GitHub/semon-ui-site/components/DocMenu/index.tsx";
+
 
 
 
@@ -24656,46 +24659,43 @@ function (_React$Component) {
     key: "render",
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_semon_semon_ui__WEBPACK_IMPORTED_MODULE_6__["Menu"], {
+        className: "doc-menu",
         activeName: this.props.router.query.title,
-        style: {
-          minWidth: 260,
-          minHeight: '100vh'
-        },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 8
+          lineNumber: 9
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Link__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Link__WEBPACK_IMPORTED_MODULE_8__["default"], {
         scroll: false,
         href: "/doc?title=introduce",
         as: "/doc/introduce",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 10
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_semon_semon_ui__WEBPACK_IMPORTED_MODULE_6__["Menu"].Item, {
         name: "introduce",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 9
+          lineNumber: 10
         },
         __self: this
-      }, "\u4ECB\u7ECD")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Link__WEBPACK_IMPORTED_MODULE_8__["default"], {
+      }, "\u4ECB\u7ECD")), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_Link__WEBPACK_IMPORTED_MODULE_8__["default"], {
         scroll: false,
-        href: "/doc?title=install",
-        as: "/doc/install",
+        href: "/doc?title=getting-started",
+        as: "/doc/getting-started",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 11
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_semon_semon_ui__WEBPACK_IMPORTED_MODULE_6__["Menu"].Item, {
-        name: "install",
+        name: "getting-started",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 10
+          lineNumber: 11
         },
         __self: this
       }, "\u5B89\u88C5")));
@@ -24794,10 +24794,10 @@ function (_React$Component) {
 
 /***/ }),
 
-/***/ "./components/Navigator.tsx":
-/*!**********************************!*\
-  !*** ./components/Navigator.tsx ***!
-  \**********************************/
+/***/ "./components/Navigator/index.tsx":
+/*!****************************************!*\
+  !*** ./components/Navigator/index.tsx ***!
+  \****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -24808,11 +24808,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _semon_semon_ui__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @semon/semon-ui */ "../semon-ui-react/dist/index.js");
 /* harmony import */ var _semon_semon_ui__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_semon_semon_ui__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Route__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Route */ "./components/Route.tsx");
-/* harmony import */ var _DocMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DocMenu */ "./components/DocMenu.tsx");
-/* harmony import */ var _components_Link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../components/Link */ "./components/Link.tsx");
+/* harmony import */ var _Route__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Route */ "./components/Route.tsx");
+/* harmony import */ var _DocMenu__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../DocMenu */ "./components/DocMenu/index.tsx");
+/* harmony import */ var _Link__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../Link */ "./components/Link.tsx");
+/* harmony import */ var _navigator_scss__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./navigator.scss */ "./components/Navigator/navigator.scss");
+/* harmony import */ var _navigator_scss__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(_navigator_scss__WEBPACK_IMPORTED_MODULE_6__);
 
-var _jsxFileName = "/Users/WangShuo/Documents/GitHub/semon-ui-site/components/Navigator.tsx";
+var _jsxFileName = "/Users/WangShuo/Documents/GitHub/semon-ui-site/components/Navigator/index.tsx";
 
 
 
@@ -24822,11 +24824,12 @@ var Header = _semon_semon_ui__WEBPACK_IMPORTED_MODULE_2__["Layout"].Header,
     Sider = _semon_semon_ui__WEBPACK_IMPORTED_MODULE_2__["Layout"].Sider;
 
 
+
 var NavLink = function NavLink(props) {
-  return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_components_Link__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
+  return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Link__WEBPACK_IMPORTED_MODULE_5__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 23
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_semon_semon_ui__WEBPACK_IMPORTED_MODULE_2__["Button"], {
@@ -24835,7 +24838,7 @@ var NavLink = function NavLink(props) {
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 24
     },
     __self: this
   }, props.children));
@@ -24846,20 +24849,21 @@ var Navigator = function Navigator(_ref) {
   return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_semon_semon_ui__WEBPACK_IMPORTED_MODULE_2__["Layout"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
+      lineNumber: 29
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](Header, {
+    className: "page-header",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 30
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](NavLink, {
     href: "/",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 31
     },
     __self: this
   }, "\u4E3B\u9875"), react__WEBPACK_IMPORTED_MODULE_1__["createElement"](NavLink, {
@@ -24867,62 +24871,63 @@ var Navigator = function Navigator(_ref) {
     as: "/doc/introduce",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 32
     },
     __self: this
   }, "\u7EC4\u4EF6")), react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Route__WEBPACK_IMPORTED_MODULE_3__["Switch"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 33
+      lineNumber: 34
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Route__WEBPACK_IMPORTED_MODULE_3__["default"], {
     href: "/doc",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 35
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_semon_semon_ui__WEBPACK_IMPORTED_MODULE_2__["Layout"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 36
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](Sider, {
+    className: "doc-sider",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_DocMenu__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 37
     },
     __self: this
   })), react__WEBPACK_IMPORTED_MODULE_1__["createElement"](Content, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](Content, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 38
     },
     __self: this
   }, children)))), react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Route__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1__["createElement"](Content, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
   }, children))));
@@ -24932,10 +24937,10 @@ var Navigator = function Navigator(_ref) {
 
 /***/ }),
 
-/***/ "./components/ProgressBar.tsx":
-/*!************************************!*\
-  !*** ./components/ProgressBar.tsx ***!
-  \************************************/
+/***/ "./components/ProgressBar/index.tsx":
+/*!******************************************!*\
+  !*** ./components/ProgressBar/index.tsx ***!
+  \******************************************/
 /*! no exports provided */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -24945,8 +24950,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_router__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(next_router__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! nprogress */ "./node_modules/nprogress/nprogress.js");
 /* harmony import */ var nprogress__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(nprogress__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _style_progressbar_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../style/progressbar.css */ "./style/progressbar.css");
-/* harmony import */ var _style_progressbar_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_style_progressbar_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _progressbar_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./progressbar.scss */ "./components/ProgressBar/progressbar.scss");
+/* harmony import */ var _progressbar_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_progressbar_scss__WEBPACK_IMPORTED_MODULE_2__);
 
 
 
@@ -36874,12 +36879,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/possibleConstructorReturn */ "./node_modules/@babel/runtime-corejs2/helpers/esm/possibleConstructorReturn.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/getPrototypeOf */ "./node_modules/@babel/runtime-corejs2/helpers/esm/getPrototypeOf.js");
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/inherits */ "./node_modules/@babel/runtime-corejs2/helpers/esm/inherits.js");
-/* harmony import */ var _components_ProgressBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ProgressBar */ "./components/ProgressBar.tsx");
+/* harmony import */ var _components_ProgressBar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/ProgressBar */ "./components/ProgressBar/index.tsx");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! next/app */ "./node_modules/next/app.js");
 /* harmony import */ var next_app__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(next_app__WEBPACK_IMPORTED_MODULE_10__);
-/* harmony import */ var _components_Navigator__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Navigator */ "./components/Navigator.tsx");
+/* harmony import */ var _components_Navigator__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Navigator */ "./components/Navigator/index.tsx");
 /* harmony import */ var _components_Route__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/Route */ "./components/Route.tsx");
 /* harmony import */ var _semon_semon_ui_dist_index_css__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @semon/semon-ui/dist/index.css */ "../semon-ui-react/dist/index.css");
 /* harmony import */ var _semon_semon_ui_dist_index_css__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_semon_semon_ui_dist_index_css__WEBPACK_IMPORTED_MODULE_13__);
