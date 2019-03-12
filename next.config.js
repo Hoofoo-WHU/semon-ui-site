@@ -14,7 +14,8 @@ module.exports = withTypescript(withCSS(withSass({
       '/404.html': { page: '/_error' },
       '/': { page: '/' },
       '/doc/introduce': { page: '/doc', query: { title: 'introduce' } },
-      '/doc/install': { page: '/doc', query: { title: 'install' } }
+      '/doc/getting-started': { page: '/doc', query: { title: 'getting-started' } },
+      '/doc/button': { page: '/doc', query: { title: 'button' } }
     }
   },
   webpack: (config) => {
