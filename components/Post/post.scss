@@ -6,9 +6,16 @@
   padding: 45px;
   color: #314659;
   font-weight: 400;
+  line-height: 1.8;
   h1,
   h2 {
     border: none;
+  }
+  a {
+    color: #1890ff;
+  }
+  code {
+    margin: 0 0.2em;
   }
 }
 
@@ -17,6 +24,7 @@
 }
 
 .markdown-body:not(:last-child) {
+  padding-bottom: 0;
   margin-bottom: 24px;
 }
 

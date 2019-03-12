@@ -1,4 +1,8 @@
 import React, { createRef } from 'react'
+import { Button } from '@semon/semon-ui'
+import './demo.scss'
+import MD from 'markdown-it'
+const md = new MD({ html: true })
 
 export interface DemoProps extends React.Props<{}> {
   className?: string
@@ -9,18 +13,26 @@ export interface DemoProps extends React.Props<{}> {
 }
 
 class Demo extends React.Component<DemoProps, { showCode: boolean }> {
+  constructor(props: DemoProps) {
+    super(props)
+    this.codeClickHandle = this.codeClickHandle.bind(this)
+  }
   readonly state = {
     showCode: false
+  }
+  codeClickHandle() {
+    this.setState((pre) => ({ showCode: !pre.showCode }))
   }
   ref = createRef<HTMLPreElement>()
   render() {
     const { children, description, title, className, language, code } = this.props
     const height = this.state.showCode && this.ref.current ? this.ref.current.offsetHeight : 0
-    return <section className={`${className} wrapper`}>
+    return <section className={`${className} demo-component-wrapper`}>
       <div className='container'>{children}</div>
-      <div className='description' onClick={() => this.setState((pre) => ({ showCode: !pre.showCode }))}>
+      <div className='description'>
         <span className='title'>{title}</span>
-        <span>{description}</span>
+        <span className='content' dangerouslySetInnerHTML={{ __html: md.render(description) }} />
+        <div title={this.state.showCode ? '隐藏代码' : '显示代码'}><Button className='demon-component-code-button' size='large' shape='circle' icon='code' onClick={this.codeClickHandle}></Button></div>
       </div>
       <div className='code' style={{ height }}>
         <pre className={`language-${language || 'jsx'}`} ref={this.ref}>
@@ -29,45 +41,6 @@ class Demo extends React.Component<DemoProps, { showCode: boolean }> {
           </code>
         </pre>
       </div>
-      <style jsx>{`
-        .wrapper{
-          box-sizing: border-box;
-          border: 1px solid #e8e8e8;
-          border-radius: 4px;
-        }
-        .container{
-          padding: 30px;
-        }
-        .description{
-          border-top: 1px solid #e8e8e8;
-          padding: 20px 30px;
-          position: relative;
-          color: #6A737D;
-          font-size: 14px;
-        }
-        .description .title{
-          position: absolute;
-          background-color: #fff;
-          padding: 5px 10px;
-          left:20px;
-          top:0;
-          color: #314659;
-          font-weight: 500;
-          font-size: 16px;
-          transform: translateY(-50%);
-        }
-        .code{
-          transition: height .3s;
-          height: 0;
-          overflow: hidden;
-        }
-        pre{
-          border-top: 1px dashed #e8e8e8;
-          margin:0;
-          padding-left: 30px;
-          padding-right: 30px;
-        }
-      `}</style>
     </section >
   }
 }

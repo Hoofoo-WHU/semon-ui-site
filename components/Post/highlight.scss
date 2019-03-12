@@ -6,11 +6,11 @@
 // color vars
 $code-colors: (
   blue: #032f62,
-  teal: #0086b3,
+  teal: #18aadb,
   black: #24292e,
-  purple: #6f42c1,
-  maroon: #d73a49,
-  green: #22863a,
+  purple: #8b60dd,
+  maroon: #fc4f54,
+  green: #1890ff,
   light-gray: #f6f8fa,
   dark-gray: #969896
 );
@@ -34,7 +34,7 @@ pre[class*="language-"] {
 // code blocks
 pre[class*="language-"] {
   overflow: auto;
-  margin: 1em 0;
+  margin: 2em 0;
   padding: 1.2em;
   border-radius: 3px;
   font-size: 85%;

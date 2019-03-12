@@ -5,16 +5,21 @@ import Post from '../components/Post'
 import { Posts } from '../data/PostMenu'
 // import Router from 'next/router'
 
-class DocPage extends React.Component<{ title: keyof typeof Posts, content: string }> {
+class DocPage extends React.Component<{ title: keyof typeof Posts, content: string, api: string }> {
   static getInitialProps = async ({ query }: NextContext<{ title: string }>) => {
     let content: any
+    let api: any
     try {
       content = await import(`../markdowns/${query.title}.md`)
       content = content.default
     } catch{
       console.log('加载失败')
     }
-    return { title: query.title, content }
+    try {
+      api = await import(`../markdowns/api/${query.title}.md`)
+      api = api.default
+    } catch{ }
+    return { title: query.title, content, api }
   }
   // static defaultProps = {
   //   title: 'button',
@@ -22,19 +27,18 @@ class DocPage extends React.Component<{ title: keyof typeof Posts, content: stri
   //   demos: <p>123</p>
   // }
   render() {
-    const { title, content } = this.props
+    const { title, content, api } = this.props
     let demos = null
     try {
       demos = require(`../demos/${title}`).default
-      console.log(demos)
     } catch{ }
     return (<Page title={`${Posts[title].subTitle ? Posts[title].subTitle + ' ' : ''}${Posts[title].title} - Semon UI`}>
       <Post>{content}</Post>
       {demos && <Post>
         <h2>代码演示</h2>
         {demos}
-      </Post>
-      }
+      </Post>}
+      {api && <Post>{api}</Post>}
     </Page>
     )
   }

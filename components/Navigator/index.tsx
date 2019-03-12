@@ -40,7 +40,7 @@ const Navigator: React.FunctionComponent = ({ children }) => (
               <DocMenu></DocMenu>
             </div>
           </Sider>
-          <Content><Content>{children}</Content></Content>
+          <Content style={{ minHeight: '100vh' }}>{children}</Content>
         </Layout>
       </Route>
       <Route><Content>{children}</Content></Route>
