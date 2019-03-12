@@ -1,0 +1,1 @@
+{"version":3,"file":"static/webpack/1.6b3dafae30eb9b3d902d.hot-update.js","sources":["webpack:///./markdowns/button.md"],"sourcesContent":["module.exports = \"# Button\\n响应用户点击行为，触发相应的业务逻辑。\""],"mappings":";;;;;;;;;AAAA;;;;A","sourceRoot":""}
