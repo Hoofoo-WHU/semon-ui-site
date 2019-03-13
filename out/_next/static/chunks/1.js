@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[1],{
 
-/***/ "./markdowns/button.md":
-/*!*****************************!*\
-  !*** ./markdowns/button.md ***!
-  \*****************************/
+/***/ "./docs/button/api.md":
+/*!****************************!*\
+  !*** ./docs/button/api.md ***!
+  \****************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "# Button\n按钮用于开始一个即时操作，响应用户点击行为，触发相应的业务逻辑。\n"
+module.exports = "## API\n通过设置 Button 的属性来产生不同的按钮样式，按钮的属性说明如下：\n\n### Button\n\n属性 | 说明 | 类型 | 可选值 | 默认值\n----|----|----|----|----|----\nsize | 尺寸 | string | `small` `large` | -\ntype | 类型 | string | `primary` `dashed` `danger` | -\nshape | 形状 | string | `round` `circle` | -\nhtmlType | 原生类型 | string | `submit` `reset` `button` | -\ndisabled | 不可用 | boolean | `true` `false` | `false`\nicon | 左侧的图标 | string | 所有的图标名称 | -\niconRight | 右侧的图标 | string | 所有的图标名称 | -\nonClick | 点击事件 | React.MouseEventHandler | - | -\n\n### Button.Group\n按钮组合的属性会覆盖其中所有按钮的同名属性\n属性 | 说明 | 类型 | 可选值 | 默认值\n----|----|----|----|----|----\nsize | 尺寸 | string | `small` `large` | -\ntype | 类型 | string | `primary` `dashed` `danger` | -\nshape | 形状 | string | `round` `circle` | -\ndisabled | 不可用 | boolean | `true` `false` | `false`\n"
 
 /***/ })
 
