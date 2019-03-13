@@ -11,7 +11,7 @@ const IndexPage: React.FunctionComponent = () => {
         <h1>Hello, Semon UI 👋</h1>
         <div className='button-wrapper'>
           <Link href={`/doc?title=${Posts['getting-started'].file}`} as={`/doc/${Posts['getting-started'].file}`}><Button style={{ margin: 4, width: '7em' }} type='primary' shape='round' size='large'>开始使用</Button></Link>
-          <Link href='/'><Button style={{ margin: 4, width: '7em' }} shape='round' size='large'>GitHub</Button></Link>
+          <a href='https://github.com/Hoofoo-WHU/semon-ui/'><Button style={{ margin: 4, width: '7em' }} shape='round' size='large'>GitHub</Button></a>
         </div>
         <style jsx>{`
           .wrapper{
@@ -26,6 +26,9 @@ const IndexPage: React.FunctionComponent = () => {
           h1{
             font-size: 60px;
             margin-top: 120px;
+          }
+          a{
+            text-decoration:none;
           }
         `}</style>
       </div>

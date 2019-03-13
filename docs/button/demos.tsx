@@ -1,10 +1,10 @@
 import React from 'react'
-import Demo from '../components/Demo'
+import Demo from '../../components/Demo'
 import { Button } from '@semon/semon-ui'
 
 const demos = [
   <Demo className='component-button-type-demo'
-    key='type'
+    key='button-type'
     title='按钮类型'
     description='按钮有四种类型：主按钮、次按钮、虚线按钮、危险按钮。'
     code={
@@ -23,7 +23,7 @@ const demos = [
   `}</style>
   </Demo>,
   <Demo className='component-button-icon-demo'
-    key='icon'
+    key='button-icon'
     title='图标按钮'
     description='当需要在`Button`内嵌入`Icon`时，可以设置`icon/iconRight`属性，或者直接在`Button`内使用`Icon`组件。'
     code={
@@ -44,7 +44,7 @@ const demos = [
   `}</style>
   </Demo>,
   <Demo className='component-button-size-demo'
-    key='size'
+    key='button-size'
     title='按钮尺寸'
     description='按钮有大、中、小三种尺寸。</br>通过设置`size`为`large` `small`分别把按钮设为大、小尺寸。若不设置`size`，则尺寸为中。</br>按钮组合中按钮大小由按钮组合的`size`决定。'
     code={
@@ -81,7 +81,7 @@ const demos = [
 `}</style>
   </Demo>,
   <Demo className='component-button-disabled-demo'
-    key='disabled'
+    key='button-disabled'
     title='不可用状态'
     description='添加`disabled`属性即可让按钮处于不可用状态，同时按钮样式也会改变。'
     code={
@@ -105,7 +105,7 @@ const demos = [
 `}</style>
   </Demo>,
   <Demo className='component-button-group-demo'
-    key='group'
+    key='button-group'
     title='按钮组合'
     description='可以将多个`Button`放入`Button.Group`的容器中。<br/>可以在`Button.Group`的属性为其中所有`Button`添加属性。'
     code={

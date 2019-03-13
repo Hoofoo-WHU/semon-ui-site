@@ -43,18 +43,20 @@ export interface MenuData {
 export const Posts = {
   ['getting-started']: new PostData('快速开始', 'getting-started'),
   introduce: new PostData('介绍', 'introduce'),
-  button: new PostData('Button', 'button', '按钮')
+  button: new PostData('Button', 'button', '按钮'),
+  icon: new PostData('Icon', 'icon', '图标')
 }
 
 const data: MenuData = {
   default: Posts['getting-started'],
   opens: ['components'],
   data: [
-    Posts['introduce'],
+    Posts.introduce,
     Posts['getting-started'],
     new PostSubMenuData('Components', 'components', [
       new PostGroupData('通用', [
-        Posts['button']
+        Posts.button,
+        Posts.icon
       ])
     ])
   ]

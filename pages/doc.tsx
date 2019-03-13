@@ -10,13 +10,13 @@ class DocPage extends React.Component<{ title: keyof typeof Posts, content: stri
     let content: any
     let api: any
     try {
-      content = await import(`../markdowns/${query.title}.md`)
+      content = await import(`../docs/${query.title}/doc.md`)
       content = content.default
     } catch{
       console.log('加载失败')
     }
     try {
-      api = await import(`../markdowns/api/${query.title}.md`)
+      api = await import(`../docs/${query.title}/api.md`)
       api = api.default
     } catch{ }
     return { title: query.title, content, api }
@@ -30,7 +30,7 @@ class DocPage extends React.Component<{ title: keyof typeof Posts, content: stri
     const { title, content, api } = this.props
     let demos = null
     try {
-      demos = require(`../demos/${title}`).default
+      demos = require(`../docs/${title}/demos`).default
     } catch{ }
     return (<Page title={`${Posts[title].subTitle ? Posts[title].subTitle + ' ' : ''}${Posts[title].title} - Semon UI`}>
       <Post>{content}</Post>
