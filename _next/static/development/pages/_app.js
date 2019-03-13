@@ -25209,11 +25209,11 @@ var PostSubMenuData = function PostSubMenuData(title, key, children) {
 
 Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(PostSubMenuData, "type", _babel_runtime_corejs2_core_js_symbol__WEBPACK_IMPORTED_MODULE_0___default()('PostSubMenuData'));
 
-var Posts = (_Posts = {}, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_Posts, 'getting-started', new PostData('快速开始', 'getting-started')), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_Posts, "introduce", new PostData('介绍', 'introduce')), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_Posts, "button", new PostData('Button', 'button', '按钮')), _Posts);
+var Posts = (_Posts = {}, Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_Posts, 'getting-started', new PostData('快速开始', 'getting-started')), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_Posts, "introduce", new PostData('介绍', 'introduce')), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_Posts, "button", new PostData('Button', 'button', '按钮')), Object(_babel_runtime_corejs2_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_2__["default"])(_Posts, "icon", new PostData('Icon', 'icon', '图标')), _Posts);
 var data = {
   default: Posts['getting-started'],
   opens: ['components'],
-  data: [Posts['introduce'], Posts['getting-started'], new PostSubMenuData('Components', 'components', [new PostGroupData('通用', [Posts['button']])])]
+  data: [Posts.introduce, Posts['getting-started'], new PostSubMenuData('Components', 'components', [new PostGroupData('通用', [Posts.button, Posts.icon])])]
 };
 /* harmony default export */ __webpack_exports__["default"] = (data);
 
