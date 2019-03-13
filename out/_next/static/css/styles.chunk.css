@@ -1086,6 +1086,26 @@ body {
     color: #1890ff; }
   .markdown-body code {
     margin: 0 0.2em; }
+  .markdown-body table {
+    display: table;
+    border: none; }
+    .markdown-body table tr,
+    .markdown-body table td,
+    .markdown-body table th {
+      border-left: none;
+      border-right: none;
+      line-height: 3;
+      text-align: left;
+      background-color: #fff;
+      border-color: #e8e8e8;
+      font-size: 14px; }
+    .markdown-body table th {
+      font-weight: normal;
+      background: #fafafa; }
+    .markdown-body table tr > td:first-child {
+      color: #27469b; }
+    .markdown-body table tr > td:nth-child(3) {
+      color: #c41d7f; }
 
 .markdown-body:first-child:not(:last-child) {
   padding-bottom: 0; }
