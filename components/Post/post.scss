@@ -17,6 +17,31 @@
   code {
     margin: 0 0.2em;
   }
+  table {
+    display: table;
+    border: none;
+    tr,
+    td,
+    th {
+      border-left: none;
+      border-right: none;
+      line-height: 3;
+      text-align: left;
+      background-color: #fff;
+      border-color: #e8e8e8;
+      font-size: 14px;
+    }
+    th {
+      font-weight: normal;
+      background: #fafafa;
+    }
+    tr > td:first-child {
+      color: rgb(39, 70, 155);
+    }
+    tr > td:nth-child(3) {
+      color: #c41d7f;
+    }
+  }
 }
 
 .markdown-body:first-child:not(:last-child) {
