@@ -1,1 +1,1 @@
-{"version":3,"file":"static/chunks/5.js","sources":["webpack:///./docs/icon/doc.md"],"sourcesContent":["module.exports = \"# Icon 图标\\n常用的图标集合。\\n\""],"mappings":";;;;;;;;;AAAA;;;;A","sourceRoot":""}
+{"version":3,"file":"static/chunks/5.js","sources":["webpack:///./docs/icon/api.md"],"sourcesContent":["module.exports = \"## API\\n\\n属性 | 说明 | 类型 | 可选值 | 默认值\\n----|----|----|----|----|----\\ntype|类型|string|types提示的所有值|-\\nspin|旋转|boolean|`true` `false`|`false`\""],"mappings":";;;;;;;;;AAAA;;;;A","sourceRoot":""}

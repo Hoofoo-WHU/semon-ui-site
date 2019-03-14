@@ -1,0 +1,321 @@
+<!DOCTYPE html><html><head><style>body.preload *{transition: none}</style><script> window.addEventListener('load',function(){document.body.classList.remove('preload')})</script><meta charSet="utf-8" class="next-head"/><title class="next-head">栅格 Grid - Semon UI</title><link rel="preload" href="/semon-ui-site/_next/static/rtFwxItKuHMIkwgF4kEx3/pages/doc.js" as="script"/><link rel="preload" href="/semon-ui-site/_next/static/rtFwxItKuHMIkwgF4kEx3/pages/_app.js" as="script"/><link rel="preload" href="/semon-ui-site/_next/static/runtime/webpack-462483702a3f95c47366.js" as="script"/><link rel="preload" href="/semon-ui-site/_next/static/chunks/commons.e7de2989118009c1f502.js" as="script"/><link rel="preload" href="/semon-ui-site/_next/static/chunks/styles.59bee1500f5e612ee615.js" as="script"/><link rel="preload" href="/semon-ui-site/_next/static/runtime/main-ad1ede46c0cd16fb8cd6.js" as="script"/><link rel="stylesheet" href="/semon-ui-site/_next/static/css/styles.498670f0.chunk.css"/><style id="__jsx-473167457">.component-grid-demo-basic .demo-row{margin-bottom:12px;}.component-grid-demo-basic .demo-row .demo-col{background-color:#1aa1e6;color:#fff;text-align:center;line-height:3em;}.component-grid-demo-basic .demo-row .demo-col:nth-child(2n + 1){background-color:#5ebded;}</style><style id="__jsx-2128336681">.component-grid-demo-gutter .demo-row{margin-bottom:12px;}.component-grid-demo-gutter .inner-box{background-color:#1aa1e6;line-height:3em;color:white;text-align:center;}</style><style id="__jsx-270763279">.component-grid-demo-offset .demo-row{margin-bottom:12px;}.component-grid-demo-offset .inner-box{background-color:#1aa1e6;line-height:3em;color:white;text-align:center;}</style><style id="__jsx-1365601997">.component-grid-demo-order .demo-row{margin-bottom:12px;}.component-grid-demo-order .inner-box{background-color:#1aa1e6;line-height:3em;color:white;text-align:center;}</style><style id="__jsx-3968677578">.component-grid-demo-justify .demo-row{margin-bottom:12px;}.component-grid-demo-justify .inner-box{background-color:#1aa1e6;line-height:3em;color:white;text-align:center;}</style><style id="__jsx-134395241">.component-grid-demo-align .wrapper{overflow:hidden;}.component-grid-demo-align .demo-row{margin-bottom:12px;background-color:#f8f8f8;}.component-grid-demo-align .inner-box{background-color:#1aa1e6;line-height:3em;color:white;text-align:center;}</style><style id="__jsx-2551393255">.demo-row.jsx-2551393255{margin-bottom:12px;}.inner-box.jsx-2551393255{background-color:#1aa1e6;line-height:3em;color:white;text-align:center;}</style></head><body class="preload"><div id="__next"><div class="s-layout"><div class="page-header s-layout-header"><button class="s-button" style="margin-right:8px"><span>主页</span></button><button class="s-button" style="margin-right:8px"><span>组件</span></button></div><div class="s-layout s-has-sider"><div class="doc-sider s-layout-sider"><div class="doc-sider-inner"><ul role="menu" class="doc-menu s-menu"><li role="menuitem" class="s-menu-item" style="padding-left:36px"><span>介绍</span><span class="sub-title"></span></li><li role="menuitem" class="s-menu-item" style="padding-left:36px"><span>快速开始</span><span class="sub-title"></span></li><li role="submenu" class="s-menu-submenu s-active"><div class="s-title" style="padding-left:36px">Components<i class="s-arrow s-active"></i></div><ul class="s-menu"><div class="s-menu-item-group"><label style="padding-left:54px">通用</label><li role="menuitem" class="s-menu-item" style="padding-left:72px"><span>Button</span><span class="sub-title">按钮</span></li><li role="menuitem" class="s-menu-item" style="padding-left:72px"><span>Icon</span><span class="sub-title">图标</span></li></div><div class="s-menu-item-group"><label style="padding-left:54px">布局</label><li role="menuitem" class="s-menu-item s-active" style="padding-left:72px"><span>Grid</span><span class="sub-title">栅格</span></li><li role="menuitem" class="s-menu-item" style="padding-left:72px"><span>Layout</span><span class="sub-title">布局</span></li></div></ul></li></ul></div></div><div class="s-layout-content" style="min-height:100vh"><div class="markdown-body"><h1>Grid 栅格</h1>
+<p>24 栅格系统。</p>
+<h2>概述</h2>
+<p>布局的栅格化系统，我们是基于行（Row）和列（Col）来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：</p>
+<ul>
+<li>通过<code>Row</code>在水平方向建立一组<code>Col</code></li>
+<li>你的内容应当放置于<code>Col</code>内，并且，只有<code>Col</code>可以作为<code>Row</code>的直接元素</li>
+<li>栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。例如，三个等宽的列可以使用<code>span='8'</code>来创建</li>
+<li>如果一个<code>Row</code>中的<code>Col</code>总和超过 24，那么多余的<code>Col</code>会作为一个整体另起一行排列</li>
+</ul>
+</div><div class="markdown-body"><h2>代码演示</h2><section class="jsx-473167457 component-grid-demo-basic demo-component-wrapper"><div class="container"><div class="jsx-473167457 demo-row s-row s-justify-start s-align-top"><div class="jsx-473167457 demo-col s-col s-span-12">span-12</div><div class="jsx-473167457 demo-col s-col s-span-12">span-12</div></div><div class="jsx-473167457 demo-row s-row s-justify-start s-align-top"><div class="jsx-473167457 demo-col s-col s-span-8">span-8</div><div class="jsx-473167457 demo-col s-col s-span-8">span-8</div><div class="jsx-473167457 demo-col s-col s-span-8">span-8</div></div><div class="jsx-473167457 demo-row s-row s-justify-start s-align-top"><div class="jsx-473167457 demo-col s-col s-span-6">span-6</div><div class="jsx-473167457 demo-col s-col s-span-6">span-6</div><div class="jsx-473167457 demo-col s-col s-span-6">span-6</div><div class="jsx-473167457 demo-col s-col s-span-6">span-6</div></div></div><div class="description"><span class="title">基础栅格</span><span class="content"><p>通过<code>row</code>和<code>col</code>组件，并通过<code>col</code>组件的<code>span</code>属性我们就可以自由地组合布局。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;div&gt;
+    &lt;Row&gt;
+      &lt;Col span=&#x27;12&#x27;&gt;span-12&lt;/Col&gt;
+      &lt;Col span=&#x27;12&#x27;&gt;span-12&lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row&gt;
+      &lt;Col span=&#x27;8&#x27;&gt;span-8&lt;/Col&gt;
+      &lt;Col span=&#x27;8&#x27;&gt;span-8&lt;/Col&gt;
+      &lt;Col span=&#x27;8&#x27;&gt;span-8&lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row&gt;
+      &lt;Col span=&#x27;6&#x27;&gt;span-6&lt;/Col&gt;
+      &lt;Col span=&#x27;6&#x27;&gt;span-6&lt;/Col&gt;
+      &lt;Col span=&#x27;6&#x27;&gt;span-6&lt;/Col&gt;
+      &lt;Col span=&#x27;6&#x27;&gt;span-6&lt;/Col&gt;
+    &lt;/Row&gt; 
+  &lt;/div&gt;,
+  container
+)</code></pre></div></section><section class="jsx-2128336681 component-grid-demo-gutter demo-component-wrapper"><div class="container"><div class="jsx-2128336681 demo-row s-row s-justify-start s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-2128336681 demo-col s-col s-span-8" style="padding-left:6px;padding-right:6px"><div class="jsx-2128336681 inner-box">span-8</div></div><div class="jsx-2128336681 demo-col s-col s-span-8" style="padding-left:6px;padding-right:6px"><div class="jsx-2128336681 inner-box">span-8</div></div><div class="jsx-2128336681 demo-col s-col s-span-8" style="padding-left:6px;padding-right:6px"><div class="jsx-2128336681 inner-box">span-8</div></div></div></div><div class="description"><span class="title">分栏间隔</span><span class="content"><p><code>Row</code>组件提供<code>gutter</code>属性来指定每一栏之间的间隔，默认间隔为 0。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;Row gutter={12}&gt;
+    &lt;Col span=&#x27;8&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;span-8&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col span=&#x27;8&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;span-8&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col span=&#x27;8&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;span-8&lt;/div&gt;
+    &lt;/Col&gt;
+  &lt;/Row&gt;,
+  container
+)</code></pre></div></section><section class="jsx-270763279 component-grid-demo-offset demo-component-wrapper"><div class="container"><div class="jsx-270763279 demo-row s-row s-justify-start s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-270763279 demo-col s-col s-span-6" style="padding-left:6px;padding-right:6px"><div class="jsx-270763279 inner-box">span-6</div></div><div class="jsx-270763279 demo-col s-col s-span-6 s-offset-6" style="padding-left:6px;padding-right:6px"><div class="jsx-270763279 inner-box">span-6</div></div></div><div class="jsx-270763279 demo-row s-row s-justify-start s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-270763279 demo-col s-col s-span-6 s-offset-6" style="padding-left:6px;padding-right:6px"><div class="jsx-270763279 inner-box">span-6</div></div><div class="jsx-270763279 demo-col s-col s-span-6 s-offset-6" style="padding-left:6px;padding-right:6px"><div class="jsx-270763279 inner-box">span-6</div></div></div><div class="jsx-270763279 demo-row s-row s-justify-start s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-270763279 demo-col s-col s-span-12 s-offset-6" style="padding-left:6px;padding-right:6px"><div class="jsx-270763279 inner-box">span-12</div></div></div></div><div class="description"><span class="title">分栏偏移</span><span class="content"><p>通过制定<code>Col</code>组件的<code>offset</code>属性可以指定分栏偏移的栏数。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;div&gt;
+    &lt;Row gutter={12}&gt;
+      &lt;Col span=&#x27;6&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-6&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;6&#x27; offset=&#x27;6&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-6&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row gutter={12}&gt;
+      &lt;Col span=&#x27;6&#x27; offset=&#x27;6&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-6&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;6&#x27; offset=&#x27;6&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-6&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row gutter={12}&gt;
+      &lt;Col span=&#x27;12&#x27; offset=&#x27;6&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-12&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+  &lt;/div&gt;,
+  container
+)</code></pre></div></section><section class="jsx-1365601997 component-grid-demo-order demo-component-wrapper"><div class="container"><div class="jsx-1365601997 demo-row s-row s-justify-start s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-1365601997 demo-col s-col s-span-8 s-order-3" style="padding-left:6px;padding-right:6px"><div class="jsx-1365601997 inner-box">col-1 order-3</div></div><div class="jsx-1365601997 demo-col s-col s-span-8 s-order-2" style="padding-left:6px;padding-right:6px"><div class="jsx-1365601997 inner-box">col-2 order-2</div></div><div class="jsx-1365601997 demo-col s-col s-span-8 s-order-1" style="padding-left:6px;padding-right:6px"><div class="jsx-1365601997 inner-box">col-3 order-1</div></div></div></div><div class="description"><span class="title">分栏顺序</span><span class="content"><p><code>Col</code>组件提供<code>order</code>属性来指定出现顺序。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;Row gutter={12}&gt;
+    &lt;Col span=&#x27;8&#x27; order=&#x27;3&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;col-1 order-3&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col span=&#x27;8&#x27; order=&#x27;2&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;col-2 order-2&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col span=&#x27;8&#x27; order=&#x27;1&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;col-3 order-1&lt;/div&gt;
+    &lt;/Col&gt;
+  &lt;/Row&gt;,
+  container
+)</code></pre></div></section><section class="jsx-3968677578 component-grid-demo-justify demo-component-wrapper"><div class="container"><div class="jsx-3968677578 demo-row s-row s-justify-start s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div></div><div class="jsx-3968677578 demo-row s-row s-justify-center s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div></div><div class="jsx-3968677578 demo-row s-row s-justify-end s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div></div><div class="jsx-3968677578 demo-row s-row s-justify-space-between s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div></div><div class="jsx-3968677578 demo-row s-row s-justify-space-around s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div><div class="jsx-3968677578 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div class="jsx-3968677578 inner-box">span-4</div></div></div></div><div class="description"><span class="title">Flex 布局</span><span class="content"><p><code>Row</code>组件提供<code>justify</code>属性来指定<code>flex</code>布局方式。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;div&gt;
+    &lt;Row gutter={12}&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row gutter={12} justify=&#x27;center&#x27;&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row gutter={12} justify=&#x27;end&#x27;&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row gutter={12} justify=&#x27;space-between&#x27;&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row gutter={12} justify=&#x27;space-around&#x27;&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;
+        &lt;div className=&#x27;inner-box&#x27;&gt;span-4&lt;/div&gt;
+      &lt;/Col&gt;
+    &lt;/Row&gt;
+  &lt;/div&gt;,
+  container
+)</code></pre></div></section><section class="jsx-134395241 component-grid-demo-align demo-component-wrapper"><div class="container"><div class="jsx-134395241 wrapper"><div class="jsx-134395241 demo-row s-row s-justify-center s-align-top" style="margin-left:-6px;margin-right:-6px"><div class="jsx-134395241 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div style="height:100px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div style="height:50px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div style="height:120px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4" style="padding-left:6px;padding-right:6px"><div style="height:80px" class="jsx-134395241 inner-box">span-4</div></div></div><div class="jsx-134395241 demo-row s-row s-justify-space-between s-align-middle"><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:100px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:50px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:120px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:80px" class="jsx-134395241 inner-box">span-4</div></div></div><div class="jsx-134395241 demo-row s-row s-justify-space-around s-align-bottom"><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:100px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:50px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:120px" class="jsx-134395241 inner-box">span-4</div></div><div class="jsx-134395241 demo-col s-col s-span-4"><div style="height:80px" class="jsx-134395241 inner-box">span-4</div></div></div></div></div><div class="description"><span class="title">分栏对齐</span><span class="content"><p><code>Row</code>组件提供<code>align</code>属性来指定对齐方式。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;div&gt;
+    &lt;Row gutter={12} justify=&#x27;center&#x27; align=&#x27;top&#x27;&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 100 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 50 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 120 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 80 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row justify=&#x27;space-between&#x27; align=&#x27;middle&#x27;&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 100 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 50 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 120 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 80 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+    &lt;/Row&gt;
+    &lt;Row justify=&#x27;space-around&#x27; align=&#x27;bottom&#x27;&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 100 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 50 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 120 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+      &lt;Col span=&#x27;4&#x27;&gt;&lt;div className=&#x27;inner-box&#x27; style={{ height: 80 }}&gt;span-4&lt;/div&gt;&lt;/Col&gt;
+    &lt;/Row&gt;
+  &lt;/div&gt;,
+  container
+)</code></pre></div></section><section class="jsx-2551393255 demo-component-wrapper"><div class="container"><div class="jsx-2551393255 demo-row s-row s-justify-start s-align-top" style="margin-left:-4px;margin-right:-4px"><div class="jsx-2551393255 s-col s-span-24 s-span-xs-2 s-span-sm-4 s-span-md-6 s-span-lg-8 s-span-xl-10" style="padding-left:4px;padding-right:4px"><div class="jsx-2551393255 inner-box">Responseable</div></div><div class="jsx-2551393255 s-col s-span-24 s-span-xs-20 s-span-sm-16 s-span-md-12 s-span-lg-8 s-span-xl-4" style="padding-left:4px;padding-right:4px"><div class="jsx-2551393255 inner-box">Responseable</div></div><div class="jsx-2551393255 s-col s-span-24 s-span-xs-2 s-span-sm-4 s-span-md-6 s-span-lg-8 s-span-xl-10" style="padding-left:4px;padding-right:4px"><div class="jsx-2551393255 inner-box">Responseable</div></div></div></div><div class="description"><span class="title">响应式布局</span><span class="content"><p><code>Col</code>组件提供<code>xs</code> <code>sm</code> <code>md</code> <code>lg</code> <code>xl</code>属性来指定不同大小屏幕对应的<code>span</code>属性，如果缺省则会优先更大屏。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;Row gutter={8}&gt;
+    &lt;Col xs=&#x27;2&#x27; sm=&#x27;4&#x27; md=&#x27;6&#x27; lg=&#x27;8&#x27; xl=&#x27;10&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;Responseable&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col xs=&#x27;20&#x27; sm=&#x27;16&#x27; md=&#x27;12&#x27; lg=&#x27;8&#x27; xl=&#x27;4&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;Responseable&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col xs=&#x27;2&#x27; sm=&#x27;4&#x27; md=&#x27;6&#x27; lg=&#x27;8&#x27; xl=&#x27;10&#x27;&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;Responseable&lt;/div&gt;
+    &lt;/Col&gt;
+  &lt;/Row&gt;,
+  container
+)</code></pre></div></section><section class="jsx-2551393255 demo-component-wrapper"><div class="container"><div class="jsx-2551393255 demo-row s-row s-justify-start s-align-top" style="margin-left:-4px;margin-right:-4px"><div class="jsx-2551393255 s-col s-span-24 s-span-md-5 s-offset-md-1 s-span-xl-6 s-offset-xl-2" style="padding-left:4px;padding-right:4px"><div class="jsx-2551393255 inner-box">Responseable</div></div><div class="jsx-2551393255 s-col s-span-24 s-span-md-11 s-offset-md-1 s-span-xl-6 s-offset-xl-2" style="padding-left:4px;padding-right:4px"><div class="jsx-2551393255 inner-box">Responseable</div></div><div class="jsx-2551393255 s-col s-span-24 s-span-md-5 s-offset-md-1 s-span-xl-6 s-offset-xl-2" style="padding-left:4px;padding-right:4px"><div class="jsx-2551393255 inner-box">Responseable</div></div></div></div><div class="description"><span class="title">其他属性的响应式</span><span class="content"><p><code>span</code> <code>order</code> <code>offset</code>属性可以通过内嵌到<code>xs</code> <code>sm</code> <code>md</code> <code>lg</code> <code>xl</code>属性中来使用。</p>
+</span><div title="显示代码"><button class="demon-component-code-button s-button s-large s-circle s-icon-only"><svg class="s-icon" width="200" height="200" viewBox="64 64 896 896" data-type="code"><path d="M438.4 849.1l222.7-646.7c.2-.5.3-1.1.4-1.6L438.4 849.1z"></path><path d="M661.2 168.7h-67.5c-3.4 0-6.5 2.2-7.6 5.4L354.7 846c-.3.8-.4 1.7-.4 2.6 0 4.4 3.6 8 8 8h67.8c3.4 0 6.5-2.2 7.6-5.4l.7-2.1 223.1-648.3 7.4-21.4c.3-.8.4-1.7.4-2.6-.1-4.5-3.6-8.1-8.1-8.1zm293.4 333.4c-.8-1-1.7-1.9-2.7-2.7l-219-171.3c-3.5-2.7-8.5-2.1-11.2 1.4-1.1 1.4-1.7 3.1-1.7 4.9v81.3c0 2.5 1.1 4.8 3.1 6.3l115 90-115 90c-1.9 1.5-3.1 3.8-3.1 6.3v81.3c0 4.4 3.6 8 8 8 1.8 0 3.5-.6 4.9-1.7l219-171.3c6.9-5.4 8.2-15.5 2.7-22.5zm-663.5-174l-219 171.3c-1 .8-1.9 1.7-2.7 2.7-5.4 7-4.2 17 2.7 22.5l219 171.3c1.4 1.1 3.1 1.7 4.9 1.7 4.4 0 8-3.6 8-8v-81.3c0-2.5-1.1-4.8-3.1-6.3l-115-90 115-90c1.9-1.5 3.1-3.8 3.1-6.3v-81.3c0-1.8-.6-3.5-1.7-4.9-2.7-3.5-7.7-4.1-11.2-1.4z"></path></svg></button></div></div><div class="code" style="height:0"><pre class="language-jsx"><code class="language-jsx">import { Row, Col } from &#x27;@semon/semon-ui&#x27;
+
+ReactDOM.render(
+  &lt;Row gutter={8}&gt;
+    &lt;Col md={{ span: &#x27;5&#x27;, offset: &#x27;1&#x27; }} xl={{ span: &#x27;6&#x27;, offset: &#x27;2&#x27; }}&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;Responseable&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col md={{ span: &#x27;11&#x27;, offset: &#x27;1&#x27; }} xl={{ span: &#x27;6&#x27;, offset: &#x27;2&#x27; }}&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;Responseable&lt;/div&gt;
+    &lt;/Col&gt;
+    &lt;Col md={{ span: &#x27;5&#x27;, offset: &#x27;1&#x27; }} xl={{ span: &#x27;6&#x27;, offset: &#x27;2&#x27; }}&gt;
+      &lt;div className=&#x27;inner-box&#x27;&gt;Responseable&lt;/div&gt;
+    &lt;/Col&gt;
+  &lt;/Row&gt;,
+  container
+)</code></pre></div></section></div><div class="markdown-body"><h2>API</h2>
+<h3>Row</h3>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>justify</td>
+<td>排列方式</td>
+<td>string</td>
+<td><code>start</code> <code>end</code> <code>space-between</code> <code>space-around</code> <code>center</code></td>
+<td><code>start</code></td>
+</tr>
+<tr>
+<td>align</td>
+<td>对齐方式</td>
+<td>string</td>
+<td><code>top</code> <code>middle</code> <code>bottom</code></td>
+<td><code>top</code></td>
+</tr>
+<tr>
+<td>gutter</td>
+<td>栅格间隔，通过传入包含xs, sm, md, lg, xl, xxl的对象设置响应式</td>
+<td>number/Object</td>
+<td>-</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3>Col</h3>
+<p>按钮组合的属性会覆盖其中所有按钮的同名属性</p>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>说明</th>
+<th>类型</th>
+<th>可选值</th>
+<th>默认值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>span</td>
+<td>占位格数</td>
+<td>string</td>
+<td><code>1</code> ~ <code>24</code></td>
+<td><code>24</code></td>
+</tr>
+<tr>
+<td>offset</td>
+<td>左侧间隔格数</td>
+<td>string</td>
+<td><code>1</code> ~ <code>24</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td>order</td>
+<td>栅格顺序</td>
+<td>string</td>
+<td><code>1</code> ~ <code>24</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td>xs</td>
+<td><code>[0, 576px)</code>响应式栅格,可以为span值或包含span, offset, order属性的对象</td>
+<td>string/object</td>
+<td>同上述属性</td>
+<td>-</td>
+</tr>
+<tr>
+<td>sm</td>
+<td><code>[576px, 768px)</code>响应式栅格,可以为span值或包含span, offset, order属性的对象</td>
+<td>string/object</td>
+<td>同上述属性</td>
+<td>-</td>
+</tr>
+<tr>
+<td>md</td>
+<td><code>[768px, 992px)</code>响应式栅格,可以为span值或包含span, offset, order属性的对象</td>
+<td>string/object</td>
+<td>同上述属性</td>
+<td>-</td>
+</tr>
+<tr>
+<td>lg</td>
+<td><code>[992px, 1200px)</code>响应式栅格,可以为span值或包含span, offset, order属性的对象</td>
+<td>string/object</td>
+<td>同上述属性</td>
+<td>-</td>
+</tr>
+<tr>
+<td>xl</td>
+<td><code>[1200px, 1600px)</code>响应式栅格,可以为span值或包含span, offset, order属性的对象</td>
+<td>string/object</td>
+<td>同上述属性</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3>响应式说明</h3>
+<p>当前屏幕对应的响应式缺省时会使用更大一级的响应式，直到值存在或者直接使用组件的属性。</p>
+</div></div></div></div></div><script id="__NEXT_DATA__" type="application/json">{"props":{"pageProps":{"title":"grid","content":"# Grid 栅格\n24 栅格系统。\n## 概述\n布局的栅格化系统，我们是基于行（Row）和列（Col）来定义信息区块的外部框架，以保证页面的每个区域能够稳健地排布起来。下面简单介绍一下它的工作原理：\n\n- 通过`Row`在水平方向建立一组`Col`\n- 你的内容应当放置于`Col`内，并且，只有`Col`可以作为`Row`的直接元素\n- 栅格系统中的列是指 1 到 24 的值来表示其跨越的范围。例如，三个等宽的列可以使用`span='8'`来创建\n- 如果一个`Row`中的`Col`总和超过 24，那么多余的`Col`会作为一个整体另起一行排列\n","api":"## API\n\n### Row\n\n属性 | 说明 | 类型 | 可选值 | 默认值\n----|----|----|----|----|----\njustify | 排列方式 | string | `start` `end` `space-between` `space-around` `center` | `start`\nalign | 对齐方式 | string | `top` `middle` `bottom` | `top`\ngutter | 栅格间隔，通过传入包含xs, sm, md, lg, xl, xxl的对象设置响应式 | number/Object | - | 0\n\n### Col\n按钮组合的属性会覆盖其中所有按钮的同名属性\n属性 | 说明 | 类型 | 可选值 | 默认值\n----|----|----|----|----|----\nspan | 占位格数 | string | `1` ~ `24` | `24`\noffset | 左侧间隔格数 | string | `1` ~ `24` | `0`\norder | 栅格顺序 | string | `1` ~ `24` | -\nxs | `[0, 576px)`响应式栅格,可以为span值或包含span, offset, order属性的对象 | string/object | 同上述属性 | -\nsm | `[576px, 768px)`响应式栅格,可以为span值或包含span, offset, order属性的对象 | string/object | 同上述属性 | -\nmd | `[768px, 992px)`响应式栅格,可以为span值或包含span, offset, order属性的对象 | string/object | 同上述属性 | -\nlg | `[992px, 1200px)`响应式栅格,可以为span值或包含span, offset, order属性的对象 | string/object | 同上述属性 | -\nxl | `[1200px, 1600px)`响应式栅格,可以为span值或包含span, offset, order属性的对象 | string/object | 同上述属性 | -\n\n### 响应式说明\n当前屏幕对应的响应式缺省时会使用更大一级的响应式，直到值存在或者直接使用组件的属性。"}},"page":"/doc","query":{"title":"grid"},"buildId":"rtFwxItKuHMIkwgF4kEx3","assetPrefix":"/semon-ui-site","runtimeConfig":{"BASE_URL":"/semon-ui-site"},"nextExport":true}</script><script async="" id="__NEXT_PAGE__/doc" src="/semon-ui-site/_next/static/rtFwxItKuHMIkwgF4kEx3/pages/doc.js"></script><script async="" id="__NEXT_PAGE__/_app" src="/semon-ui-site/_next/static/rtFwxItKuHMIkwgF4kEx3/pages/_app.js"></script><script src="/semon-ui-site/_next/static/runtime/webpack-462483702a3f95c47366.js" async=""></script><script src="/semon-ui-site/_next/static/chunks/commons.e7de2989118009c1f502.js" async=""></script><script src="/semon-ui-site/_next/static/chunks/styles.59bee1500f5e612ee615.js" async=""></script><script src="/semon-ui-site/_next/static/runtime/main-ad1ede46c0cd16fb8cd6.js" async=""></script></body></html>
