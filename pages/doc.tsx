@@ -2,10 +2,11 @@ import * as React from 'react'
 import Page from '../components/Page'
 import { NextContext } from 'next'
 import Post from '../components/Post'
-import { Posts } from '../data/PostMenu'
+import { Posts, PostTitle } from '../data/PostMenu'
+import PrevNextNav from '../components/PrevNextNav';
 // import Router from 'next/router'
 
-class DocPage extends React.Component<{ title: keyof typeof Posts, content: string, api: string }> {
+class DocPage extends React.Component<{ title: PostTitle, content: string, api: string }> {
   static getInitialProps = async ({ query }: NextContext<{ title: string }>) => {
     let content: any
     let api: any
@@ -39,6 +40,7 @@ class DocPage extends React.Component<{ title: keyof typeof Posts, content: stri
         {demos}
       </Post>}
       {api && <Post>{api}</Post>}
+      <PrevNextNav title={title} />
     </Page>
     )
   }
