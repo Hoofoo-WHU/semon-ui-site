@@ -1,13 +1,13 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
 
-/***/ "./docs/icon/doc.md":
+/***/ "./docs/icon/api.md":
 /*!**************************!*\
-  !*** ./docs/icon/doc.md ***!
+  !*** ./docs/icon/api.md ***!
   \**************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "# Icon 图标\n常用的图标集合。\n"
+module.exports = "## API\n\n属性 | 说明 | 类型 | 可选值 | 默认值\n----|----|----|----|----|----\ntype|类型|string|types提示的所有值|-\nspin|旋转|boolean|`true` `false`|`false`"
 
 /***/ })
 
