@@ -8,7 +8,17 @@ const demos = [
     title='基本用法'
     description='通过`type`属性指定图标名称, `spin`属性使图标旋转。'
     code={
-      `import { Icon } from '@semon/semon-ui'\n\n<Icon type='user' />\n<Icon type='search' />\n<Icon type='code' />\n<Icon type='check-circle-fill' spin />`
+      `import { Icon } from '@semon/semon-ui'
+
+ReactDOM.render(
+  <div>
+    <Icon type='user' />
+    <Icon type='search' />
+    <Icon type='code' />
+    <Icon type='check-circle-fill' spin />
+  </div>,
+  container
+)`
     }
   >
     <Icon className='demo-icon' type='user' />

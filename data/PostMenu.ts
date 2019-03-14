@@ -44,7 +44,9 @@ export const Posts = {
   ['getting-started']: new PostData('快速开始', 'getting-started'),
   introduce: new PostData('介绍', 'introduce'),
   button: new PostData('Button', 'button', '按钮'),
-  icon: new PostData('Icon', 'icon', '图标')
+  icon: new PostData('Icon', 'icon', '图标'),
+  grid: new PostData('Grid', 'grid', '栅格'),
+  layout: new PostData('Layout', 'layout', '布局')
 }
 
 const data: MenuData = {
@@ -57,6 +59,10 @@ const data: MenuData = {
       new PostGroupData('通用', [
         Posts.button,
         Posts.icon
+      ]),
+      new PostGroupData('布局', [
+        Posts.grid,
+        Posts.layout
       ])
     ])
   ]
